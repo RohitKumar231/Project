@@ -1,0 +1,85 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style2.css">
+    </head>
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>Reshedule your Appoinment</h2>
+            <form>
+            <label>
+                <span>Appointment Id</span>
+                <input type="email" value={{appointment_id}} >
+            </label>
+            <label>
+                <span>Time</span>
+                <input type="password" value={{time}}>
+            </label>
+	    
+            <label>
+                <span>Date</span>
+                <input type="email" value={{date}}>
+            </label>
+	    <label>
+                <span>Address</span>
+                <input type="email" value={{address}}>
+            </label>
+            <label>
+                <span>Booked with</span>
+                <input type="email" value={{worker_name}}>
+            </label>
+            <button type="submit" class="submit"><a href="/update_appointment/">Update</a></button>
+            </form>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+
+                    <h3>Want to cancle the Appointment?<h3>
+                </div>
+                <div class="img__text m--in">
+
+                    <h3>Want to Reshedule the Appointment, Update it.<h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Cancle</span>
+                    <span class="m--in">Reshedule</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>Cancle your Appointment</h2>
+                <form action="" >
+                <label>
+                    <span>Appointment Id value={{appointment_id}}</span>
+                    <input type="text" />
+                </label>
+                <label>
+                    <span>Booked with value={{worker_name}}</span>
+                    <input type="text" />
+                </label>
+                <label>
+                    <span>Time value={{time}}</span>
+                    <input type="text" />
+                </label>
+                <label>
+                    <span>Date value={{date}}</span>
+                    <input type="text" />
+                </label>
+                <label>
+                    <span>Address value={{address}}</span>
+                    <input type="text" />
+                </label>
+                <button type="submit" class="submit"><a href="/cancle_appointment/">Cancle Appointment</a></button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+    </script>
+
+</html>
