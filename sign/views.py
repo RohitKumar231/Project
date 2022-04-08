@@ -21,7 +21,7 @@ def signup(request):
     else:
         users = Users(name=name, mob=mobile, Address=address, Email=email, password=psw)
         users.save()
-        Id = Users.objects.filter(Email=email).id
+        Id = Users.objects.filter(Email=email)[0].id
         messages.success(request, 'Signup Success')         ############
         return render(request, 'index.html',{'user_id':Id})
 
@@ -30,7 +30,7 @@ def signin(request):
     email = request.POST.get("email")
     psw = request.POST.get("psw")
     if Users.objects.filter(Email=email,password=psw):
-        Id = Users.objects.filter(Email=email,password=psw).id
+        Id = Users.objects.filter(Email=email,password=psw)[0].id
         messages.success(request,'Log In Success')          ##########
         return render(request,'index.html',{'user_id':Id})               ###########
     else:

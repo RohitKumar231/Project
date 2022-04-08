@@ -22,7 +22,7 @@ class Workers(models.Model):
 
 
 class Appointment(models.Model):
-    worker_id = models.ForeignKey(Workers, on_delete=models.CASCADE)
-    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
-    Appointment_date = models.CharField(max_length=300)
+    worker_id = models.IntegerField(default=0)
+    user_id = models.IntegerField(default=0)
+    Appointment_date = models.CharField(max_length=100)
     completed = models.IntegerField(default=0)
