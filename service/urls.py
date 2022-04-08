@@ -1,4 +1,4 @@
-"""service URL Configuration
+"""dummy URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -14,23 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from app1.cancle_appointment import cancle_appointment
-from app1.register_for_profession import register_for_profession
-from app1.update_appointment import update_appointment
-from app1.views import update_appointment_page, login_signup, home,signup,login
-
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('register_for_profession/', register_for_profession),
-    path('cancle_appointment/', cancle_appointment),
-    path('update_appointment/', update_appointment),
-    path('update_appointment_page/', update_appointment_page),
-    path('login_signup/', login_signup),
-    path('signup/', signup),
-    path('login/', login),
+    path('', include('home.urls')),
+    path('sign/', include('sign.urls')),
+    path('register/', include('register.urls')),
+    path('aboutus/', include('aboutus.urls')),
+    path('contact/', include('contact.urls')),
+    path('service/', include('service.urls')),
+    path('booking/', include('booking.urls')),
 
 
 ]

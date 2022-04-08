@@ -145,7 +145,11 @@
 			background-color: #000;
 			text-align: center;
 			cursor: pointer;
+<<<<<<< HEAD
 			width: 100%;
+=======
+			width: 200px;
+>>>>>>> 9f4d0e9b224305f041af8c331e9cdd9744608325
 			margin:20px;
 		  }
 		  
@@ -156,14 +160,22 @@
     </head>
     <body>
         <div class="navbar">
+<<<<<<< HEAD
                 <a href=#>Home</a>
                 <a href="#appointments">Appointments</a>
                 <a href="contact.html">Contact</a>
                 <a href="aboutus.html">About</a>
+=======
+                <a href='/'>Home</a>
+<!--                <a href="#appointments">Appointments</a>-->
+                <a href="/contact/">Contact</a>
+                <a href="/aboutus/">About</a>
+>>>>>>> 9f4d0e9b224305f041af8c331e9cdd9744608325
         </div>
 
        
 		<div class="container">
+<<<<<<< HEAD
 			<h1>{{servicename}}</h1>
 			<div class="rowslider">
 				<div class="card">  
@@ -230,6 +242,28 @@
 
 		</div>
 		
+=======
+			<h1>{{service}}</h1>
+			<div class="rowslider">
+				{% for data in rows %}
+				<div class="card">
+					<div class="content">
+					 <form action="/booking">
+						 <input type="hidden" name="service" value= {{service}}>
+						 <input type="hidden" name="name" value={{data.name}}>
+						<h2>{{data.name}}</h2>
+						<h4>{{data.contact}}</h4> 
+						<h4>{{data.Email}}</h4>
+						<h4>{{data.Address}}</h4>
+						<h4>{{Charges}}</h4>
+						<button class="button">Appointment</button>
+					</form>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+>>>>>>> 9f4d0e9b224305f041af8c331e9cdd9744608325
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
