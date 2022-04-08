@@ -1,4 +1,4 @@
-"""dummy URL Configuration
+""" URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,18 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from . import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('sign/', include('sign.urls')),
-    path('register/', include('register.urls')),
-    path('aboutus/', include('aboutus.urls')),
-    path('contact/', include('contact.urls')),
-    path('service/', include('services.urls')),
-    path('booking/', include('booking.urls')),
-    path('appointments/', include('appointments.urls')),
-    path('main/', include('main.urls')),
-
+    path('', views.signup_login, name= 'signup_login'),
+    path('up/', views.signup, name= 'signup'),
+    path('in/', views.signin, name= 'signin'),
 
 ]

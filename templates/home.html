@@ -44,7 +44,7 @@
             color: black;
           }
           #top_banner{
-            background: url('images/1.jpeg') ;
+            background: url('image1.jpg') ;
             height: 500;
             
           }
@@ -88,66 +88,12 @@
           position:relative;
           bottom: -200px;
         }
+       
+         
         
-        #scard{
-          display: flex;
-          width: fit-content;
-          margin-left: auto;
-          margin-right: auto;
-        }
-            
-        .card{  
-          width: 250px;  
-          height: 300px;  
-          position: relative;  
-          margin: 40px 30px; 
-          border-radius: 20px; 
-          border-style: solid;
-          border-color: #ddd;
-          
-          
-        
-        }
-        .card .content{  
-          width: 100%;  
-          height: 100%;  
-          background: none;  
-          border-radius: 20px;    
-          color: white;  
-          display: flex;  
-          justify-content: center;  
-          align-items: center;  
-          flex-direction: column;  
-          }  
-          
-          .btn {
-            border:0px;
-            outline: 0;
-            padding: 10px;
-            color: white;
-            border-radius: 20px; 
-            background-color: #1abc9c;
-            text-align: center;
-            cursor: pointer;
-            width: 200px;
-            margin:20px,40px;
-            }
-            
-            .button:hover {
-            background-color: #555;
-            }
-            
-        
-          .card .content h2{  
-          color: #0B5345; 
-          font-family: 'Helvetica Neue', sans-serif; 
-          font-size:25px; 
-          padding: 0 0 40px;
-          text-align:center;
-          }
         
         #midbanner{
-          background-image: url(images/1.jpeg);
+          background-image: url(image1.jpg);
           height: 700;
         }
         
@@ -209,11 +155,10 @@
             <div>
                 <nav>
                     <div class="navbar">
+                        <a href="/sign/">Signup/Signin</a>
+                        <a href="/register/">Register</a>
                         <a href="/aboutus/">About Us</a>
                         <a href="contact/">Contact</a>
-<!--                        <a href="/appointments/">Appointments</a>-->
-<!--                        <input type='hidden' name='user_id' value={{user_id}} >-->
-                        <a href="/appointments/?user_id=abc">Appointments</a>
                     </div>
         
 <!--                    nav bar-->
@@ -231,7 +176,7 @@
         </div>
         <div id="main_title">
             <h1>Let Us Help</h1>
-            <p>Best service, Right Time, Right People </p>
+            <p>Best Service, Right Time, Right People</p>
     <!--        let us help-->
         </div>
         <div>
@@ -243,105 +188,24 @@
     </div>
     
 
-
-<!--    service section-->
+    <!--    service section-->
     <section>
          <!--quotes-->
          <div>
 
             <!--        quotes-->
         </div>
-        <div >
             <div>
-                <h1>Our Services</h1>
+                <h1>Please Login / Sign up to use our services!!!</h1>
     <!--            our services-->
             </div >
             <br>
-                <div id="scard">
-                    <div class="card">  
-                        <div class="content">
-                            <form action= '/service/'>
-                                <input type='hidden' name='service' value="CLEANING">
-                                <input type='hidden' name='userid' value="{{user_id}}">
-                            <h2>CLEANING</h2>
-                            <button class="btn" >TRY</button>
-                            </form>
-                        </div>  
-                    </div> 
-                    <div class="card">  
-                        <div class="content">
-                            <form action= 'service/'>
-                                <input type='hidden' name='service' value='SALON' >
-                                <input type='hidden' name='userid' value="{{user_id}}">
-                            <h2>SALON</h2>  
-                            <button class="btn" >TRY</button>
-                            </form>
-                        </div>  
-                    </div>
-                    <div class="card">  
-                        <div class="content">  
-                            <form action= '/service/'>
-                                <input type='hidden' name='service' value='ELECTRICIAN' >
-                                <input type='hidden' name='userid' value="{{user_id}}">
-                            <h2>ELECTRICIAN</h2>
-                            <button class="btn">TRY</button>
-                            </form>
-                        </div>  
-                    </div>
-                    <div class="card">  
-                        <div class="content">  
-                            <form action= '/service/'>
-                                <input type='hidden' name='service'value="PLUMBING">
-                                <input type='hidden' name='userid' value="{{user_id}}">
-                            <h2>PLUMBING</h2>
-                            <button class="btn">TRY</button>
-                            </form> 
-                        </div>  
-                    </div>
-                </div>
-                    <div id="scard">
-                    <div class="card">
-                        <div class="content">  
-                            <form action= '/service/'>
-                                <input type='hidden' name='service' value="LAUNDRY">
-                                <input type='hidden' name='userid' value="{{user_id}}">
-                            <h2>LAUNDRY</h2>
-                            <button class="btn">TRY</button>
-                            </form>
-                        </div>  
-                    </div> 
-                    <div class="card">  
-                        <div class="content">  
-                            <form action= '/service/'>
-                                <input type='hidden' name='service' value="CAR WASH">
-                                <input type='hidden' name='userid' value="{{user_id}}">
-                            <h2>CAR WASH</h2>
-                            <button class="btn">TRY</button>
-                            </form> 
-                        </div>  
-                    </div>
-                    <div class="card"> 
-                        <div class="content">  
-                            <form action= '/service/'>
-                                <input type='hidden' name='service' value=" PEST CONTROL">
-                                <input type='hidden' name='userid' value="{{user_id}}">
-                            <h2>PEST CONTROL</h2>
-                            <button class="btn">TRY</button>
-                            </form> 
-                        </div>  
-                    </div>
-                    <div class="card">  
-                        <div class="content">  
-                            <form action= '/service/'>
-                                <input type='hidden' name='service' value="GARDENING">
-                                <input type='hidden' name='userid' value="{{user_id}}">
-                            <h2 >GARDENING</h2>
-                            <button class="btn">TRY</button>
-                            </form> 
-                        </div>  
-                    </div>
-                </div>
-    </section>
+                
+    </section>    
+
+
+
+
 <!--footer-->
     <footer>
         <!-- footer img start -->

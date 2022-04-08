@@ -145,6 +145,7 @@
 			background-color: #000;
 			text-align: center;
 			cursor: pointer;
+			width: 200px;
 			width: 100%;
 			margin:20px;
 		  }
@@ -156,6 +157,10 @@
     </head>
     <body>
         <div class="navbar">
+                <a href='/main/'>Home</a>
+<!--                <a href="#appointments">Appointments</a>-->
+                <a href="/contact/">Contact</a>
+                <a href="/aboutus/">About</a>
                 <a href=#>Home</a>
                 <a href="#appointments">Appointments</a>
                 <a href="contact.html">Contact</a>
@@ -164,6 +169,28 @@
 
        
 		<div class="container">
+			<h1>{{service}}</h1>
+			<div class="rowslider">
+				{% for data in rows %}
+				<div class="card">
+					<div class="content">
+					 <form action="/booking">
+						 <input type="hidden" name="service" value= {{service}}>
+						 <input type="hidden" name="name" value={{data.name}}>
+						 <input type="hidden" name="email" value={{data.Email}}>
+						 <input type="hidden" name="userid" value={{userid}}>
+						<h2>{{data.name}}</h2>
+						<h4>{{data.contact}}</h4> 
+						<h4>{{data.Email}}</h4>
+						<h4>{{data.Address}}</h4>
+						<h4>{{Charges}}</h4>
+						<button class="button">Appointment</button>
+					</form>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
 			<h1>{{servicename}}</h1>
 			<div class="rowslider">
 				<div class="card">  
