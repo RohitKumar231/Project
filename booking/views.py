@@ -21,4 +21,4 @@ def booking_done(request):
     Id = Workers.objects.filter(Email=email)[0].id
     appointment = Appointment(Appointment_date = datetime, completed = 0 ,worker_id= Id, user_id=userid)
     appointment.save()
-    return render(request, 'booking_completed.html',{'workername':workername, 'service':service, 'datetime':datetime,'id':Id})
+    return render(request, 'booking_completed.html',{'workername':workername, 'service':service, 'datetime':datetime,'appointmenty_id':Id})
