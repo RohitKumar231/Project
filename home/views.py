@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 
 # Create your views here.
+<<<<<<< HEAD
 def home_page(request):
     return render(request, 'home.html')
 def update_cancle(request):
@@ -31,3 +32,7 @@ def cancle(request):
 
 def new_appointment(request):
     return render(request, "index.html")
+=======
+def index(request):
+    return render(request, 'home.html')
+>>>>>>> 6165257590c2df7fd6a79f4dd8db111c82b8ff95

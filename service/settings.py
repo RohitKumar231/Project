@@ -37,11 +37,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'home',
     'register',
     'sign',
     'contact',
 
+=======
+    'aboutus',
+    'booking',
+    'contact',
+    'home',
+    'register',
+    'services',
+    'sign',
+>>>>>>> 6165257590c2df7fd6a79f4dd8db111c82b8ff95
 ]
 
 MIDDLEWARE = [
@@ -81,7 +91,7 @@ WSGI_APPLICATION = 'service.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "service",
+        'NAME': "services",
         'USER': "root",
         'PASSWORD': 'krati@123',
         'HOST': "127.0.0.1",
