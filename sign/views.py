@@ -17,20 +17,22 @@ def signup(request):
     mobile = request.POST.get("mob")
     address = request.POST.get("address")
     if Users.objects.filter(Email=email).exists():
-        return redirect('signup')                     ####### Need to improve
+        return render(request, 'login_signup.html')                  ####### Need to improve
     else:
         users = Users(name=name, mob=mobile, Address=address, Email=email, password=psw)
         users.save()
+        Id = Users.objects.filter(Email=email).id
         messages.success(request, 'Signup Success')         ############
-        return HttpResponse('Signup fxn')
+        return render(request, 'index.html',{'user_id':Id})
 
 
 def signin(request):
     email = request.POST.get("email")
     psw = request.POST.get("psw")
     if Users.objects.filter(Email=email,password=psw):
+        Id = Users.objects.filter(Email=email,password=psw).id
         messages.success(request,'Log In Success')          ##########
-        return render(request,'profile.html')               ###########
+        return render(request,'index.html',{'user_id':Id})               ###########
     else:
         messages.warning(request,'Email/Password is Incorrect')
-        return redirect('signup_login')
+        return render(request,'login_signup.html')

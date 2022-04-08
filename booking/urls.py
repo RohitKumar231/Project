@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
     path('',views.booking ,name='booking' ),
-    path('/submit', views.booking_done, name='booking_done')
+    path('submit/', views.booking_done, name='booking_done')
 ]

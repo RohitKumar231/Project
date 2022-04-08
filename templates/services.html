@@ -156,7 +156,7 @@
     </head>
     <body>
         <div class="navbar">
-                <a href='/'>Home</a>
+                <a href='/main/'>Home</a>
 <!--                <a href="#appointments">Appointments</a>-->
                 <a href="/contact/">Contact</a>
                 <a href="/aboutus/">About</a>
@@ -172,6 +172,7 @@
 					 <form action="/booking">
 						 <input type="hidden" name="service" value= {{service}}>
 						 <input type="hidden" name="name" value={{data.name}}>
+						 <input type="hidden" name="email" value={{data.Email}}>
 						<h2>{{data.name}}</h2>
 						<h4>{{data.contact}}</h4> 
 						<h4>{{data.Email}}</h4>
