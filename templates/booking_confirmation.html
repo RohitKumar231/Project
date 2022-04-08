@@ -107,6 +107,10 @@ input[type=submit]:hover {
                 <a href="/main/">Home</a>
                 <a href="/contact/">Contact</a>
                 <a href="/aboutus/">About</a>
+                <a href="#home">Home</a>
+                <a href="#appointments">Appointments</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
             </div>
 
 
@@ -114,6 +118,7 @@ input[type=submit]:hover {
   <div class="row">
     <div class="column">
       <form action ="submit/">
+      <form action ="">
         <label for="WorkerName">Worker Name</label>
         <input type="text" id="WorkerName" name="WorkerName" value={{workername}} readonly>
         <label for="service">Service for</label>
@@ -121,6 +126,7 @@ input[type=submit]:hover {
         <input type="text"  name="email" value={{email}} >
         <input type="text"  name="userid" value={{userid}} >
 
+        <label for="subject">Subject</label>
         <label for="datetime">Schedule Appointment</label>
         <input type="datetime-local" id="datetime"  name="datetime" >
         <input type="submit" value="submit">
